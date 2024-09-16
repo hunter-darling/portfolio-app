@@ -5,7 +5,7 @@ import { useTheme } from "next-themes"
 
 import { Button } from "@/components/ui/button"
 import { MoonIcon, SunIcon } from "@radix-ui/react-icons"
-import { resolve } from "path"
+// import { resolve } from "path"
 
 export default function ThemeToggle() {
   const { setTheme, resolvedTheme } = useTheme()
