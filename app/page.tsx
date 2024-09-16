@@ -1,3 +1,4 @@
+import Footer from "@/components/footer";
 import Header from "@/components/header";
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
           <h1 className="text-3xl font-bold">Coming Soon!</h1>
         </div>
       </section>
+      <Footer />
     </>
   );
 }
