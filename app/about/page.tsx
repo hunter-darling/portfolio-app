@@ -9,7 +9,7 @@ export default function About() {
         <div className="container max-w-3xl mx-auto">
           <Image
             className="mx-auto rounded-lg"
-            src='/images/me.jpeg'
+            src="/images/me.jpeg"
             alt="Me"
             height="150"
             width="250"
