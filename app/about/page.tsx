@@ -1,17 +1,10 @@
 import Kilroy from "@/components/kilroy";
-import Image, { getImageProps } from "next/image";
+import Image from "next/image";
 
 export default function About() {
-  const common = { alt: 'Me', width: 250, height: 150 }
-  const {
-    props: { srcSet: dark },
-  } = getImageProps({ ...common, src: '/images/me.jpeg' })
-  const {
-    props: { srcSet: light, ...rest },
-  } = getImageProps({ ...common, src: '/images/me.jpeg' })
   
   return (
-        <>
+    <>
       <section className="py-24">
         <div className="container max-w-3xl mx-auto">
           <Image
@@ -21,11 +14,6 @@ export default function About() {
             height="150"
             width="250"
           />
-          {/* <picture>
-            <source media="(prefers-color-scheme: dark)" srcSet={dark} />
-            <source media="(prefers-color-scheme: light)" srcSet={light} />
-            <Image className="mx-auto " alt={"Me"} {...rest} />
-          </picture> */}
           <h1 className="text-xl font-bold w-fit mx-auto py-4">Howdy Partner!</h1>
           <p className="text-sm py-2">
             For the last ~5 years I have been working as a software engineer with a focus in web application development, specifically in the customer identity and profile management space.</p>
