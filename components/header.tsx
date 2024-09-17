@@ -9,19 +9,26 @@ export default function Header() {
         <div>
           <Link href='/' className='font-serif text-2xl font-bold'>HD</Link>
         </div>
-
-        <ul className='flex items-center gap-6 text-sm font-light text-muted-foreground'>
-          <li className='transition-colors hover:text-foreground'>
-            <Link href='/projects'>Projects</Link>
-          </li>
-          <li className='transition-colors hover:text-foreground'>
-            <Link href='/about'>About</Link>
-          </li>
-          <li className='transition-colors hover:text-foreground'>
-            <Link href='/contact'>Contact</Link>
-          </li>
-        </ul>
-
+          <ul className='flex items-center gap-6 text-sm font-light text-muted-foreground'>
+            <li className='transition-colors hover:text-foreground'>
+              <Link href='/about'>About</Link>
+            </li>
+            <li className='transition-colors hover:text-foreground'>
+              <Link href='/projects'>Projects</Link>
+            </li>
+            <li className='transition-colors hover:text-foreground'>
+              <Link href='/work-examples'>Work Examples</Link>
+            </li>
+            <li className='transition-colors hover:text-foreground'>
+              <a href="mailto:hunterperryd@gmail.com?subject=Howdy Partner!"
+              target="_blank"
+              rel="noreferrer"
+              >Contact</a>
+            </li>
+            {/* <li className='transition-colors hover:text-foreground'>
+              <Link href='/booklist'>Currently Reading</Link>
+            </li> */}
+          </ul>
         <div>
           <ThemeToggle />
         </div>
