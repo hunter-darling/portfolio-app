@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import React from 'react'
-import { useTheme } from 'next-themes'
 
 export default function Footer() {
   return (
@@ -31,7 +30,7 @@ export default function Footer() {
           </li>
           <li className='transition-colors hover:text-foreground'>
             <a
-              href="https://www.linkedin.com/in/hunter-darling-55676b106"
+              href="https://linkedin.com/in/hunter-darling-55676b106"
               target="_blank"
               rel="noreferrer noopener"
             >
