@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
+import { useTheme } from 'next-themes'
 
 export default function Footer() {
   return (
@@ -13,6 +14,14 @@ export default function Footer() {
               rel="noreferrer noopener"
             >
               <Image
+                className="hidden dark:block"
+                src='/images/github-dark.svg'
+                alt="GitHub"
+                height="36"
+                width="36"
+              />
+              <Image
+                className="dark:hidden"
                 src='/images/github-light.svg'
                 alt="GitHub"
                 height="36"
@@ -27,11 +36,19 @@ export default function Footer() {
               rel="noreferrer noopener"
             >
               <Image
-                  src='/images/linkedin-light.svg'
-                  alt="LinkedIn"
-                  height="34"
-                  width="34"
-                />
+                className="hidden dark:block"
+                src='/images/linkedin-dark.svg'
+                alt="LinkedIn"
+                height="34"
+                width="34"
+              />
+              <Image
+                className="dark:hidden"
+                src='/images/linkedin-light.svg'
+                alt="LinkedIn"
+                height="34"
+                width="34"
+              />
             </a>
           </li>
         </ul>

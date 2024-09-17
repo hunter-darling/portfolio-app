@@ -5,7 +5,6 @@ import { useTheme } from "next-themes"
 
 import { Button } from "@/components/ui/button"
 import { MoonIcon, SunIcon } from "@radix-ui/react-icons"
-// import { resolve } from "path"
 
 export default function ThemeToggle() {
   const { setTheme, resolvedTheme } = useTheme()
@@ -21,8 +20,8 @@ export default function ThemeToggle() {
 
   return (
     <Button 
-      size='sm'
-      variant='ghost'
+      size="sm"
+      variant="outline"
       onClick={() => {
         setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')
       }}>
