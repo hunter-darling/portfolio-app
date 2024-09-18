@@ -1,4 +1,3 @@
-import Kilroy from "@/components/kilroy";
 import Image from "next/image";
 
 export default function About() {
