@@ -12,7 +12,7 @@ export default function Projects() {
             height="144"
             width="144"
           />
-          <p className="text-2xl font-bold py-2">This page is under construction! Please check back again soon!</p>
+          <p className="text-2xl text-center font-bold py-2">This page is under construction! Please check back again soon!</p>
         </div>
       </section>
     </>
