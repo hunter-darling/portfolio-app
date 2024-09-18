@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function Footer() {
   return (
-    <footer className='fixed inset-x-0 bottom-0 z-50 bg-background/75 py-6'>
+    <footer className='fixed inset-x-0 bottom-0 z-50 bg-background/5 py-6'>
       <nav className='container flex max-w-3xl items-center justify-between'>
         <ul className='flex items-center gap-6 text-sm font-light text-slate-300'>
           <li className='transition-colors hover:text-foreground'>
