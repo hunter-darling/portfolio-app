@@ -28,7 +28,7 @@ export default function About() {
             </a> in React and Python, and will continue to do so as long as I still have fingers and a brain, so check back again soon to see more!
           </p>
           <p className="text-sm text-center py-2">
-            I am currently based in Austin, TX. My hobbies include sand volleyball, tennis, playing any video game published by FromSoftware, and chiefly, reading sci-fi. Isaac Asimov is one of my favorite authors of all time, and his short story "The Message" is the inspiration for this site's masoct (and favicon): Kilroy. If you are interested, feel free to connect with me on <a 
+            I am currently based in Austin, TX. My hobbies include sand volleyball, tennis, playing any video game published by FromSoftware, and chiefly, reading sci-fi. Isaac Asimov is one of my favorite authors of all time, and his short story &quot;The Message&quot; is the inspiration for this site&apos;s masoct (and favicon): Kilroy. If you are interested, feel free to connect with me on <a 
               href="https://goodreads.com/user/show/182063111-hunter-darling" 
               target="_blank"
               rel="noreferrer" 
