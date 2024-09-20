@@ -33,7 +33,7 @@ export default function About() {
               rel="noreferrer" 
               className="underline hover:underline-offset-2">
               Goodreads
-            </a> or take a peek at what I am currently reading!
+            </a> and take a peek at what I am currently reading!
           </p>
         </div>
       </section>
