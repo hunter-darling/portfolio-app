@@ -4,7 +4,7 @@ export default function About() {
   
   return (
     <>
-      <section className="py-24">
+      <section className="pt-24 pb-6">
         <div className="container max-w-3xl mx-auto">
           <Image
             className="mx-auto rounded-lg"
