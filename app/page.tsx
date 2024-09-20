@@ -1,4 +1,4 @@
-import Kilroy from "@/components/kilroy";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -21,7 +21,13 @@ export default function Home() {
           <p className="text-m text-center pt-2">This site is not static. I will continue to update it as I build and learn new things, so be sure check back in again soon to see more!</p>
           <h1 className="text-2xl font-bold w-fit mx-auto pt-8">Thanks for stopping by!</h1>
         </div>
-        <Kilroy/>
+          <Image
+            className="mx-auto py-4 h-fit"
+            src='/images/kilroy.png'
+            alt="Kilroy Was Here"
+            height="120"
+            width="120"
+          />
       </section>
     </>
   );
