@@ -65,7 +65,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Run the Python script as a child process
-    return new Promise((resolve) => {
+    return new Promise<Response>((resolve) => {
       let dataString = '';
 
       // Send the request data to the Python script
