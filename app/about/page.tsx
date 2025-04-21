@@ -4,14 +4,14 @@ export default function About() {
   
   return (
     <>
-      <section className="pt-24 pb-6">
+      <section className="pt-24 pb-6 scrollable">
         <div className="container max-w-3xl mx-auto">
           <Image
             className="mx-auto rounded-lg"
             src="/images/me.jpeg"
             alt="Me"
-            height="150"
-            width="250"
+            height="100"
+            width="200"
           />
           <h1 className="text-xl font-bold w-fit mx-auto py-2">Howdy!</h1>
           <p className="text-sm text-center py-2">
