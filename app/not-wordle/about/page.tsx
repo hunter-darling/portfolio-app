@@ -43,6 +43,17 @@ export default function NotWordleAbout() {
           </li>
         </ul>
 
+        <h2 className="text-2xl font-semibold mt-8 mb-4">Game Flow</h2>
+        <ol className="list-decimal pl-6 mb-4">
+          <li>Game initializes with a welcome message</li>
+          <li>Player enters a 5-letter word guess</li>
+          <li>System validates the guess and provides feedback</li>
+          <li>Colors update to show correct/incorrect letters</li>
+          <li>Process repeats until game ends</li>
+          <li>Final screen shows game outcome and the correct word</li>
+          <li>Player can restart the game at any time (for the Wordle faithful, read &quot;cheating is allowed&quot;)</li>
+        </ol>
+
         <h3 className="text-xl font-semibold mt-6 mb-3">User Interface</h3>
         <ul className="list-disc pl-6 mb-4">
           <li>Terminal-inspired design with a dark theme</li>
@@ -61,17 +72,6 @@ export default function NotWordleAbout() {
           <li>Focus management for improved user experience (cursor automatically moves to the input field when game is active)</li>
           <li>Automatic scrolling to keep the latest content visible</li>
         </ul>
-
-        <h2 className="text-2xl font-semibold mt-8 mb-4">Game Flow</h2>
-        <ol className="list-decimal pl-6 mb-4">
-          <li>Game initializes with a welcome message</li>
-          <li>Player enters a 5-letter word guess</li>
-          <li>System validates the guess and provides feedback</li>
-          <li>Colors update to show correct/incorrect letters</li>
-          <li>Process repeats until game ends</li>
-          <li>Final screen shows game outcome and the correct word</li>
-          <li>Player can restart the game at any time (for the Wordle faithful, read &quot;cheating is allowed&quot;)</li>
-        </ol>
 
         <h2 className="text-2xl font-semibold mt-8 mb-4">Technical Architecture</h2>
         <ul className="list-disc pl-6 mb-4">

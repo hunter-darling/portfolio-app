@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { handleRequest } from '../../../lib/not-wordle';
+import { handleRequest } from '../../../lib/games/not-wordle';
 
 export async function POST(request: NextRequest) {
   try {
