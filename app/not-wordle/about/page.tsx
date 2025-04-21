@@ -30,8 +30,8 @@ export default function NotWordleAbout() {
           <li>Players have 5 attempts to guess a 5-letter word</li>
           <li>Each guess provides feedback through color-coded letters in classic Wordle style:
             <ul className="list-disc pl-6 mt-2">
-              <li>Green: Letter is correct and in the right position</li>
-              <li>Yellow: Letter is in the word but in the wrong position</li>
+              <li>Cyan: Letter is correct and in the right position</li>
+              <li>Orange: Letter is in the word but in the wrong position</li>
               <li>Gray: Letter is not in the word</li>
             </ul>
           </li>

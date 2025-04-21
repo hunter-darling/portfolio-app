@@ -218,11 +218,11 @@ export default function GamePage() {
             
             // Check if this letter is in the correct position
             if (guess.correctLetters.includes(letter) && guess.correctLetters.indexOf(letter) === i) {
-              bgColor = 'bg-green-600'; // Correct letter in correct position
+              bgColor = 'bg-cyan-600'; // Correct letter in correct position
             } 
             // Check if this letter is in the wrong position (but not already marked as correct)
             else if (guess.outOfPlaceLetters.includes(letter)) {
-              bgColor = 'bg-yellow-600'; // Letter in wrong position
+              bgColor = 'bg-orange-400'; // Letter in wrong position
             }
             
             return (
@@ -258,7 +258,7 @@ export default function GamePage() {
       
       <div 
         ref={terminalRef}
-        className="bg-black dark:bg-gray-800 text-green-400 p-4 rounded-lg h-96 overflow-y-auto font-mono mb-4"
+        className="bg-black dark:bg-gray-800 text-cyan-400 p-4 rounded-lg h-96 overflow-y-auto font-mono mb-4"
       >
         <div className="mb-2">
           Welcome to (Definitely Not Just a Rip-Off of) Wordle AKA Not-Wordle! One 5 letter word, 5 guesses. Good Luck!
@@ -275,19 +275,19 @@ export default function GamePage() {
         {/* Display game over message */}
         {gameOver && (
           <div className="mt-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
-            <h2 className={playerWon ? "text-xl font-bold mb-2 text-green-400" : "text-xl font-bold mb-2 text-red-400"}>
+            <h2 className={playerWon ? "text-xl font-bold mb-2 text-cyan-400" : "text-xl font-bold mb-2 text-orange-400"}>
               {playerWon
                 ? "Congratulations!"
                 : "Game Over!"
               }
             </h2>
-            <p className={playerWon ? "text-green-400" : "text-red-400"}>
+            <p className={playerWon ? "text-cyan-400" : "text-orange-400"}>
               {playerWon 
                 ? "You've guessed the word!" 
                 : "You've run out of guesses!"}
             </p>
             <p className="text-white mt-2">
-              The word was: <span className="text-green-400 font-bold">{actualWord || correctLetters.join('')}</span>
+              The word was: <span className="text-cyan-400 font-bold">{actualWord || correctLetters.join('')}</span>
             </p>
           </div>
         )}
@@ -302,7 +302,7 @@ export default function GamePage() {
                 value={input}
                 onChange={handleInputChange}
                 maxLength={5}
-                className="bg-transparent border-none outline-none text-green-400 w-full"
+                className="bg-transparent border-none outline-none text-white w-full"
                 placeholder="Enter your guess..."
                 disabled={isLoading || gameOver}
                 autoFocus
@@ -320,7 +320,7 @@ export default function GamePage() {
         <div className="flex gap-4">
           <button
             onClick={startNewGame}
-            className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded"
+            className={`bg-cyan-600 hover:bg-cyan-700 text-white px-4 py-2 rounded ${gameOver ? 'bg-orange-600 hover:bg-orange-700' : ''}`}
             disabled={isLoading}
           >
             {gameOver ? 'Play Again' : 'Restart Game'}

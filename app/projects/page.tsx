@@ -37,13 +37,6 @@ export default function Projects() {
             </div>
             
             <div className="border rounded-lg p-6 hover:shadow-md transition-shadow">
-              <Image
-                className="mx-auto py-4"
-                src='/images/under-construction.png'
-                alt="Under Construction"
-                height="144"
-                width="144"
-              />
               <p className="text-2xl font-bold py-2 text-center">More projects coming soon!</p>
             </div>
           </div>
