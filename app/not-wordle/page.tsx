@@ -153,7 +153,7 @@ export default function GamePage() {
         setMessages([...messages, `Your guess: ${input}`, data.message]);
         setCorrectLetters(data.correctLetters || []);
         setOutOfPlaceLetters(data.outOfPlaceLetters || []);
-        setTurnsLeft(data.turns_left);
+        setTurnsLeft(turnsLeft - 1);
         
         if (data.correct) {
           setGameOver(true);
@@ -205,6 +205,17 @@ export default function GamePage() {
     // Create an array of all letters in the guess
     const allLetters = guess.guess.split('');
     
+    // Create a map to track which letters have been processed
+    const processedLetters = new Map<string, number[]>();
+    
+    // First, identify all positions of each letter in the guess
+    allLetters.forEach((letter, i) => {
+      if (!processedLetters.has(letter)) {
+        processedLetters.set(letter, []);
+      }
+      processedLetters.get(letter)?.push(i);
+    });
+    
     return (
       <div key={index} className="mb-4">
         <div className="flex items-center mb-2">
@@ -217,12 +228,19 @@ export default function GamePage() {
             let bgColor = 'bg-gray-700'; // Default color for incorrect letters
             
             // Check if this letter is in the correct position
-            if (guess.correctLetters.includes(letter) && guess.correctLetters.indexOf(letter) === i) {
+            if (guess.correctLetters[i] === letter) {
               bgColor = 'bg-cyan-600'; // Correct letter in correct position
             } 
             // Check if this letter is in the wrong position (but not already marked as correct)
             else if (guess.outOfPlaceLetters.includes(letter)) {
-              bgColor = 'bg-orange-400'; // Letter in wrong position
+              // Count how many times this letter appears in the word to guess
+              const letterPositions = processedLetters.get(letter) || [];
+              const letterIndex = letterPositions.indexOf(i);
+              
+              // Only mark as out of place if we haven't exceeded the number of occurrences
+              if (letterIndex < guess.outOfPlaceLetters.filter(l => l === letter).length) {
+                bgColor = 'bg-orange-400'; // Letter in wrong position
+              }
             }
             
             return (
