@@ -1,9 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { spawn } from 'child_process';
+import { spawn, ChildProcess } from 'child_process';
 import path from 'path';
 
 // Store the Python process to maintain game state between requests
-let pythonProcess: any = null;
+let pythonProcess: ChildProcess | null = null;
 
 // Initialize the Python process
 function initializePythonProcess() {
@@ -67,21 +67,38 @@ export async function POST(request: NextRequest) {
     // Run the Python script as a child process
     return new Promise((resolve) => {
       let dataString = '';
-      let errorString = '';
 
       // Send the request data to the Python script
-      process.stdin.write(JSON.stringify(requestData) + '\n');
+      if (process.stdin) {
+        process.stdin.write(JSON.stringify(requestData) + '\n');
+      } else {
+        console.error('Python process stdin is null');
+        return resolve(NextResponse.json(
+          { error: 'Failed to communicate with Python process' },
+          { status: 500 }
+        ));
+      }
 
       // Collect data from the Python script
-      process.stdout.on('data', (data: Buffer) => {
-        dataString += data.toString();
-        console.log(`Python stdout: ${data.toString()}`);
-      });
+      if (process.stdout) {
+        process.stdout.on('data', (data: Buffer) => {
+          dataString += data.toString();
+          console.log(`Python stdout: ${data.toString()}`);
+        });
+      } else {
+        console.error('Python process stdout is null');
+        return resolve(NextResponse.json(
+          { error: 'Failed to communicate with Python process' },
+          { status: 500 }
+        ));
+      }
 
-      process.stderr.on('data', (data: Buffer) => {
-        errorString += data.toString();
-        console.error(`Python stderr: ${data.toString()}`);
-      });
+      // Collect errors from the Python script
+      if (process.stderr) {
+        process.stderr.on('data', (data: Buffer) => {
+          console.error(`Python stderr: ${data.toString()}`);
+        });
+      }
 
       // Handle process completion
       const timeout = setTimeout(() => {

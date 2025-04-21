@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
 // Define types for our game state
@@ -19,6 +19,7 @@ export default function GamePage() {
   const [isLoading, setIsLoading] = useState(false);
   const [gameOver, setGameOver] = useState(false);
   const [correctLetters, setCorrectLetters] = useState<string[]>([]);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [outOfPlaceLetters, setOutOfPlaceLetters] = useState<string[]>([]);
   const [turnsLeft, setTurnsLeft] = useState(5);
   const [guessHistory, setGuessHistory] = useState<GuessResult[]>([]);
@@ -27,35 +28,8 @@ export default function GamePage() {
   const inputRef = useRef<HTMLInputElement>(null);
   const [playerWon, setPlayerWon] = useState<boolean>(false);
 
-  // Initialize game on page load
-  useEffect(() => {
-    const initializeGame = async () => {
-      try {
-        await startNewGame();
-      } catch (error) {
-        console.error('Failed to initialize game:', error);
-        setMessages(['Failed to initialize game. Please try refreshing the page.']);
-      }
-    };
-    initializeGame();
-  }, []);
-
-  // Scroll to bottom of terminal when messages change
-  useEffect(() => {
-    if (terminalRef.current) {
-      terminalRef.current.scrollTop = terminalRef.current.scrollHeight;
-    }
-  }, [messages, guessHistory]);
-
-  // Focus input field when game is not over
-  useEffect(() => {
-    if (!gameOver && inputRef.current) {
-      inputRef.current.focus();
-    }
-  }, [gameOver, guessHistory]);
-
   // Start a new game
-  const startNewGame = async () => {
+  const startNewGame = useCallback(async () => {
     setIsLoading(true);
     setGameOver(false);
     setPlayerWon(false);
@@ -100,7 +74,34 @@ export default function GamePage() {
     } finally {
       setIsLoading(false);
     }
-  };
+  }, [gameId]);
+
+  // Initialize game on page load
+  useEffect(() => {
+    const initializeGame = async () => {
+      try {
+        await startNewGame();
+      } catch (error) {
+        console.error('Failed to initialize game:', error);
+        setMessages(['Failed to initialize game. Please try refreshing the page.']);
+      }
+    };
+    initializeGame();
+  }, [startNewGame]);
+
+  // Scroll to bottom of terminal when messages change
+  useEffect(() => {
+    if (terminalRef.current) {
+      terminalRef.current.scrollTop = terminalRef.current.scrollHeight;
+    }
+  }, [messages, guessHistory]);
+
+  // Focus input field when game is not over
+  useEffect(() => {
+    if (!gameOver && inputRef.current) {
+      inputRef.current.focus();
+    }
+  }, [gameOver, guessHistory]);
 
   // Handle user input
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
