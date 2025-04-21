@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { v4 as uuidv4 } from 'uuid';
+import Link from 'next/link';
 
 // Define types for our game state
 type GuessResult = {
@@ -123,7 +124,6 @@ export default function GamePage() {
     
     try {
       console.log(`Submitting guess with game ID: ${gameId}`);
-      console.log('Current game ID in state:', gameId);
       const response = await fetch('/api/not-wordle', {
         method: 'POST',
         headers: {
@@ -143,16 +143,16 @@ export default function GamePage() {
         // Add the guess to history
         const newGuess: GuessResult = {
           guess: input,
-          correctLetters: data.correct_letters || [],
-          outOfPlaceLetters: data.out_of_place_letters || [],
+          correctLetters: data.correctLetters || [],
+          outOfPlaceLetters: data.outOfPlaceLetters || [],
           message: data.message,
           correct: data.correct
         };
         
         setGuessHistory([...guessHistory, newGuess]);
         setMessages([...messages, `Your guess: ${input}`, data.message]);
-        setCorrectLetters(data.correct_letters || []);
-        setOutOfPlaceLetters(data.out_of_place_letters || []);
+        setCorrectLetters(data.correctLetters || []);
+        setOutOfPlaceLetters(data.outOfPlaceLetters || []);
         setTurnsLeft(data.turns_left);
         
         if (data.correct) {
@@ -164,8 +164,8 @@ export default function GamePage() {
         // Add the final guess to history before showing game over
         const finalGuess: GuessResult = {
           guess: input,
-          correctLetters: data.correct_letters || [],
-          outOfPlaceLetters: data.out_of_place_letters || [],
+          correctLetters: data.correctLetters || [],
+          outOfPlaceLetters: data.outOfPlaceLetters || [],
           message: data.message,
           correct: false
         };
@@ -244,18 +244,25 @@ export default function GamePage() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8 max-w-3xl mt-16">
-      <h1 className="text-3xl font-bold mb-6 text-center">Definitely Not Just a Rip-Off of Wordle</h1>
+    <div className="container mx-auto px-4 py-8 max-w-3xl mt-16 mb-24">
+      <div className="mb-6">
+        <Link 
+          href="/projects" 
+          className="inline-flex bg-primary text-primary-foreground px-4 py-2 rounded-md hover:bg-primary/90 transition-colors"
+        >
+          Back to Projects
+        </Link>
+      </div>
+      
+      <h1 className="text-3xl font-bold mb-6 text-center">Not-Wordle</h1>
       
       <div 
         ref={terminalRef}
-        className="bg-black text-green-400 p-4 rounded-lg h-96 overflow-y-auto font-mono mb-4"
+        className="bg-black dark:bg-gray-800 text-green-400 p-4 rounded-lg h-96 overflow-y-auto font-mono mb-4"
       >
-        {messages.map((message, index) => (
-          <div key={index} className="mb-2">
-            {message}
-          </div>
-        ))}
+        <div className="mb-2">
+          Welcome to (Definitely Not Just a Rip-Off of) Wordle AKA Not-Wordle! One 5 letter word, 5 guesses. Good Luck!
+        </div>
         
         {/* Display guess history */}
         {guessHistory.length > 0 && (
@@ -265,24 +272,23 @@ export default function GamePage() {
           </div>
         )}
         
-        {/* Display game over message at the bottom */}
+        {/* Display game over message */}
         {gameOver && (
           <div className="mt-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
-            <h2 className="text-xl font-bold mb-2 text-white">Game Over!</h2>
-            <p className="text-green-400">
+            <h2 className={playerWon ? "text-xl font-bold mb-2 text-green-400" : "text-xl font-bold mb-2 text-red-400"}>
+              {playerWon
+                ? "Congratulations!"
+                : "Game Over!"
+              }
+            </h2>
+            <p className={playerWon ? "text-green-400" : "text-red-400"}>
               {playerWon 
-                ? "Congratulations! You've guessed the word!" 
+                ? "You've guessed the word!" 
                 : "You've run out of guesses!"}
             </p>
             <p className="text-white mt-2">
               The word was: <span className="text-green-400 font-bold">{actualWord || correctLetters.join('')}</span>
             </p>
-            <button
-              onClick={startNewGame}
-              className="mt-4 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded"
-            >
-              Play Again
-            </button>
           </div>
         )}
         
@@ -311,13 +317,15 @@ export default function GamePage() {
           Turns left: {turnsLeft}
         </div>
         
-        <button
-          onClick={startNewGame}
-          className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded"
-          disabled={isLoading}
-        >
-          {gameOver ? 'New Game' : 'Restart Game'}
-        </button>
+        <div className="flex gap-4">
+          <button
+            onClick={startNewGame}
+            className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded"
+            disabled={isLoading}
+          >
+            {gameOver ? 'Play Again' : 'Restart Game'}
+          </button>
+        </div>
       </div>
     </div>
   );

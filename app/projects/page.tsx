@@ -10,23 +10,29 @@ export default function Projects() {
           
           <div className="grid gap-6 mt-8">
             <div className="border rounded-lg p-6 hover:shadow-md transition-shadow">
-              <h2 className="text-xl font-bold mb-2">Definitely Not Just a Rip-Off of Wordle</h2>
+              <h2 className="text-xl font-bold mb-2">Not-Wordle</h2>
               <p className="text-muted-foreground mb-4">
-                A word-guessing game inspired by Wordle. Built with Next.js, React, and Python. View the original source code for the Python script on my GitHub.
+                A word-guessing game inspired by Wordle. View the original Python script on my GitHub.
               </p>
               <Link 
                 href="/not-wordle" 
                 className="inline-block bg-primary text-primary-foreground px-4 py-2 rounded-md hover:bg-primary/90 transition-colors"
               >
-                Play Game
+                Play
+              </Link>
+              <Link 
+                href="/not-wordle/about" 
+                className="inline-flex bg-secondary text-secondary-foreground ml-4 px-4 py-2 rounded-md hover:bg-secondary/90 transition-colors"
+              >
+                About
               </Link>
               <Link 
                 href="https://github.com/hunter-darling/basically-just-wordle" 
-                className="inline-flex bg-primary text-primary-foreground ml-4 px-4 py-2 rounded-md hover:bg-primary/90 transition-colors"
+                className="inline-flex bg-secondary text-secondary-foreground ml-4 px-4 py-2 rounded-md hover:bg-secondary/90 transition-colors"
                 target="_blank"
                 rel="noreferrer"
               >
-                View Source Code &lt;/&gt;
+                &lt;/&gt;
               </Link>
             </div>
             
