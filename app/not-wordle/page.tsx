@@ -74,7 +74,7 @@ export default function GamePage() {
     } finally {
       setIsLoading(false);
     }
-  }, [gameId]);
+  }, []);
 
   // Initialize game on page load
   useEffect(() => {
@@ -174,6 +174,7 @@ export default function GamePage() {
         setMessages([...messages, `Your guess: ${input}`, data.message]);
         setGameOver(true);
         setPlayerWon(false);
+        setTurnsLeft(0);
         
         // Extract the word from the message if available
         if (data.word) {
