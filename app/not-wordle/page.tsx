@@ -279,7 +279,7 @@ export default function GamePage() {
         className="bg-black dark:bg-gray-800 text-cyan-400 p-4 rounded-lg h-96 overflow-y-auto font-mono mb-4"
       >
         <div className="mb-2">
-          Welcome to (Definitely Not Just a Rip-Off of) Wordle AKA Not-Wordle! One 5 letter word, 5 guesses. Good Luck!
+          Welcome to &quot;Definitely Not Just A Clone Of Wordle&quot;, or &quot;Not-Wordle&quot; for short! One 5 letter word, 5 guesses. Good Luck!
         </div>
         
         {/* Display guess history */}

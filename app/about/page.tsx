@@ -23,7 +23,7 @@ export default function About() {
             I have enjoyed exploring creating some smaller side projects that you can find on my GitHub, and will continue to do so as long as I still have fingers and a brain, so check back again soon to see more!
           </p>
           <p className="text-sm text-center py-2">
-            I am currently based in West Michigan. My hobbies include sand volleyball, tennis, playing any video game published by From Software, and chiefly, reading sci-fi. Isaac Asimov is one of my favorite authors of all time, and his short story &quot;The Message&quot; is the inspiration for this site&apos;s masoct (and favicon): Kilroy. If you are interested, feel free to connect with me on <a 
+            I am currently based in West Michigan. My hobbies include sand volleyball, tennis, playing any video game published by From Software, and chiefly, reading sci-fi. Isaac Asimov is one of my favorite authors of all time, and his short story &quot;The Message&quot; is the inspiration for this site&apos;s mascot (and favicon): Kilroy. If you are interested, feel free to connect with me on <a 
               href="https://goodreads.com/user/show/182063111-hunter-darling" 
               target="_blank"
               rel="noreferrer" 
