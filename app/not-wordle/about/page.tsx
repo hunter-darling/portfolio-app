@@ -13,7 +13,7 @@ export default function NotWordleAbout() {
       </div>
 
       <article className="prose prose-invert max-w-none">
-        <h1 className="text-3xl font-bold mb-6">About "Not-Wordle"</h1>
+        <h1 className="text-3xl font-bold mb-6">About &quot;Not-Wordle&quot;</h1>
 
         <h2 className="text-2xl font-semibold mt-8 mb-4">Overview</h2>
         <p>
@@ -70,7 +70,7 @@ export default function NotWordleAbout() {
           <li>Colors update to show correct/incorrect letters</li>
           <li>Process repeats until game ends</li>
           <li>Final screen shows game outcome and the correct word</li>
-          <li>Player can restart the game at any time (for the Wordle faithful, read "cheating is allowed")</li>
+          <li>Player can restart the game at any time (for the Wordle faithful, read &quot;cheating is allowed&quot;)</li>
         </ol>
 
         <h2 className="text-2xl font-semibold mt-8 mb-4">Technical Architecture</h2>
