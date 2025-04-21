@@ -20,7 +20,7 @@ export default function NotWordleAbout() {
           Not-Wordle is a terminal-inspired word guessing game built with Next.js and TypeScript. 
           The game challenges players to guess a 5-letter word within 5 attempts, providing visual 
           feedback through a color-coded system similar to the popular Wordle game, but with a 
-          unique terminal aesthetic to simulate it's original implementation as a command line game written in Python.
+          unique terminal aesthetic to simulate it&apos;s original implementation as a command line game written in Python.
         </p>
 
         <h2 className="text-2xl font-semibold mt-8 mb-4">Key Features</h2>
