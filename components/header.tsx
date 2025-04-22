@@ -7,20 +7,20 @@ export default function Header() {
     <header className='fixed inset-x-0 top-0 z-50 bg-background/5 py-6 backdrop-blur-sm'>
       <nav className='container flex max-w-3xl items-center justify-between'>
         <div>
-          <Link href='/' className='font-serif text-2xl font-bold'>HD</Link>
+          <Link href='/' className='font-serif text-3xl'>HD</Link>
         </div>
           <ul className='flex items-center gap-6 text-sm font-light text-muted-foreground'>
-            <li className='transition-colors hover:text-foreground'>
-              <Link href='/about'>About</Link>
+            <li>
+              <Link href='/about' className="inline-flex text-secondary-foreground ml-4 px-4 py-2 rounded-md hover:bg-secondary/90 transition-colors">About</Link>
             </li>
-            <li className='transition-colors hover:text-foreground'>
-              <Link href='/projects'>Projects</Link>
+            <li>
+              <Link href='/projects' className="inline-flex text-secondary-foreground ml-4 px-4 py-2 rounded-md hover:bg-secondary/90 transition-colors">Projects</Link>
             </li>
-            <li className='transition-colors hover:text-foreground'>
+            <li>
               <a href="mailto:hunterperryd@gmail.com?subject=Howdy Partner!"
               target="_blank"
               rel="noreferrer"
-              >Contact</a>
+              className="inline-flex text-secondary-foreground ml-4 px-4 py-2 rounded-md hover:bg-secondary/90 transition-colors">Contact</a>
             </li>
           </ul>
         <div>
