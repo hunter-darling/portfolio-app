@@ -6,7 +6,7 @@ export default function CommonLoginAbout() {
       <div className="mb-8">
         <Link 
           href="/projects" 
-          className="inline-flex bg-primary text-primary-foreground px-4 py-2 rounded-md hover:bg-primary/90 transition-colors"
+          className="inline-block text-secondary-foreground px-4 py-2 rounded-md hover:bg-secondary transition-colors outline outline-secondary-foreground/40"
         >
           Back to Projects
         </Link>
