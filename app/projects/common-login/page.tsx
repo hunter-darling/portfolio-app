@@ -17,7 +17,7 @@ export default function CommonLoginAbout() {
 
         <h2 className="text-2xl font-semibold mt-8 mb-4">Overview</h2>
         <p>
-          The Common Sign-In Page was a critical component of General Motors&apos; web services infrastructure, 
+          The Common Sign-In Page is a critical component of General Motors&apos; web services infrastructure, 
           serving as the primary authentication gateway across multiple GM web applications. This project 
           involved modernizing and enhancing a legacy vanilla JavaScript implementation into a robust, 
           componentized Angular application. The major brands of GM (Chevrolet, GMC, Buick, and Cadillac) 
@@ -55,7 +55,7 @@ export default function CommonLoginAbout() {
         <ul className="list-disc pl-6 mb-4">
           <li>Frontend: Angular</li>
           <li>Component Architecture: Angular Components</li>
-          <li>Styling: Angular Material and Custom CSS</li>
+          <li>Styling: Custom GM Proprietary Library</li>
         </ul>
 
       </article>

@@ -4,7 +4,7 @@ import Kilroy from './kilroy'
 
 export default function Footer() {
   return (
-    <footer className='fixed inset-x-0 bottom-0 z-50 bg-background/5 pb-6 backdrop-blur-sm'>
+    <footer className='fixed inset-x-0 bottom-0 z-50 bg-background/5 pb-2 backdrop-blur-sm'>
       <nav className='container flex max-w-3xl items-center lg:justify-start justify-between'>
         <div className='px-2'>
           <a

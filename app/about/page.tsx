@@ -4,7 +4,7 @@ export default function About() {
   
   return (
     <>
-      <section className="pt-24 pb-6 scrollable">
+      <section className="pt-24 pb-24 scrollable">
         <div className="container max-w-3xl mx-auto">
           <Image
             className="mx-auto rounded-lg"
