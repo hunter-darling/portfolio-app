@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Projects() {
   return (
     <>
-      <section className="py-24">
+      <section className="pt-24">
         <div className="container max-w-3xl mx-auto px-4">
           <h1 className="text-3xl font-bold mb-6 text-center">Projects</h1>
           

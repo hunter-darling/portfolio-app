@@ -4,8 +4,8 @@ import Kilroy from './kilroy'
 
 export default function Footer() {
   return (
-    <footer className='fixed inset-x-0 bottom-0 z-50 bg-background/5 pb-2 backdrop-blur-sm'>
-      <nav className='container flex max-w-3xl items-center lg:justify-start justify-between'>
+    <footer className='w-full bg-background/5 backdrop-blur-sm mt-auto'>
+      <nav className='container flex max-w-3xl items-center lg:justify-start justify-between py-2'>
         <div className='px-2'>
           <a
               href="https://github.com/hunter-darling"

@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <>
-      <section className="py-24">
+      <section className="pt-24">
         <div className="container max-w-3xl">
           <h1 className="text-2xl font-bold w-fit mx-auto">Welcome!</h1>
           <p className="text-l text-center pt-8">My name is Hunter Darling.</p> 

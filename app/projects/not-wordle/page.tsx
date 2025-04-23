@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function NotWordleAbout() {
   return (
-    <div className="container mx-auto px-4 py-8 max-w-3xl mt-16 mb-24">
+    <div className="container mx-auto px-4 py-8 max-w-3xl mt-16">
       <div className="mb-8">
         <Link 
           href="/projects" 
