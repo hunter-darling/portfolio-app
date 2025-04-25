@@ -11,7 +11,7 @@ export default function Projects() {
             <div className="border rounded-lg p-6 hover:shadow-md transition-shadow">
               <h2 className="text-xl font-bold mb-2">Not-Wordle</h2>
               <p className="text-muted-foreground mb-4">
-                A word-guessing game inspired by Wordle. It's not Wordle. It's Not-Wordle.
+                A word-guessing game inspired by Wordle. It&apos;s not Wordle. It&apos;s Not-Wordle.
               </p>
               <Link 
                 href="/projects/not-wordle"
