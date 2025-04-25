@@ -33,7 +33,7 @@ export default function About() {
             </a> and take a peek at what I am currently reading!
           </p>
           <p className="text-sm text-left py-2">
-            If you have some free time and nothing better to do, check out my <Link href="/blog" className="underline hover:underline-offset-2 hover:text-green-700">blog</Link> where you will be subject to my thoughts on anything from video games to sports, from politics and the socioeconomic state of the world, to my cat.
+            If you have some free time and nothing better to do, check out my <Link href="/blog" className="underline hover:underline-offset-2 hover:text-green-700">blog</Link> where you will be subject to my thoughts on anything from video games to sports to politics and the socioeconomic state of the world.
           </p>
         </div>
       </section>
