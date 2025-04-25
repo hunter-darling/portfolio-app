@@ -37,7 +37,7 @@ export default function GamePage() {
     setMessages([]);
     setCorrectLetters([]);
     setOutOfPlaceLetters([]);
-    setTurnsLeft(5);
+    setTurnsLeft(6);
     setGuessHistory([]);
     setActualWord('');
     
@@ -266,7 +266,7 @@ export default function GamePage() {
       <div className="mb-6">
         <Link 
           href="/projects" 
-          className="inline-block text-secondary-foreground px-4 py-2 rounded-md hover:bg-secondary transition-colors outline outline-secondary-foreground/40"
+          className="inline-flex text-secondary-foreground px-4 py-2 rounded-md hover:bg-primary/20 transition-colors outline outline-secondary-foreground/20"
         >
           Back to Projects
         </Link>
@@ -279,7 +279,7 @@ export default function GamePage() {
         className="bg-black dark:bg-gray-800 text-cyan-400 p-4 rounded-lg h-96 overflow-y-auto font-mono mb-4"
       >
         <div className="mb-2">
-          Welcome to &quot;Definitely Not Just A Clone Of Wordle&quot;, or &quot;Not-Wordle&quot; for short! One 5 letter word, 5 guesses. Good Luck!
+          Welcome to &quot;Definitely Not Just A Clone Of Wordle&quot;, or &quot;Not-Wordle&quot; for short! One 5 letter word, 6 guesses. Good Luck!
         </div>
         
         {/* Display guess history */}

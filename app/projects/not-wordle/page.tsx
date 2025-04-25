@@ -6,7 +6,7 @@ export default function NotWordleAbout() {
       <div className="mb-8">
         <Link 
           href="/projects" 
-          className="inline-block text-secondary-foreground px-4 py-2 rounded-md hover:bg-secondary transition-colors outline outline-secondary-foreground/40"
+          className="inline-flex text-secondary-foreground px-4 py-2 rounded-md hover:bg-primary/20 transition-colors outline outline-secondary-foreground/20"
         >
           Back to Projects
         </Link>
@@ -18,16 +18,22 @@ export default function NotWordleAbout() {
         <h2 className="text-2xl font-semibold mt-8 mb-4">Overview</h2>
         <p>
           Not-Wordle is a word guessing game built with Next.js and TypeScript. 
-          The game challenges players to guess a 5-letter word within 5 attempts, providing visual 
+          The game challenges players to guess a 5-letter word within 6 attempts, providing visual 
           feedback through a color-coded system similar to the popular Wordle game, but with a 
-          unique terminal aesthetic to simulate it&apos;s original implementation as a command line game written in Python.
+          unique terminal aesthetic to simulate it&apos;s original implementation as a command line game written in Python. View the original Python script on my <a 
+            href="https://github.com/hunter-darling/basically-just-wordle" 
+            target="_blank" 
+            rel="noreferrer"
+            className="underline hover:underline-offset-2 hover:text-green-700"
+          >GitHub
+          </a>.
         </p>
 
         <h2 className="text-2xl font-semibold mt-8 mb-4">Key Features</h2>
 
         <h3 className="text-xl font-semibold mt-6 mb-3">Game Mechanics</h3>
         <ul className="list-disc pl-6 mb-4">
-          <li>Players have 5 attempts to guess a 5-letter word</li>
+          <li>Players have 6 attempts to guess a 5-letter word</li>
           <li>Each guess provides feedback through color-coded letters in classic Wordle style:
             <ul className="list-disc pl-6 mt-2">
               <li>Cyan: Letter is correct and in the right position</li>

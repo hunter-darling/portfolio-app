@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function About() {
   
@@ -14,22 +15,25 @@ export default function About() {
             width="200"
           />
           <h1 className="text-xl font-bold w-fit mx-auto py-2">Howdy!</h1>
-          <p className="text-sm text-center py-2">
+          <p className="text-sm text-left py-2">
             For the last 4 years I have been working as a software engineer with a focus in web application development, specifically in the customer identity and profile management space.</p>
-          <p className="text-sm text-center py-2">
+          <p className="text-sm text-left py-2">
             My professional software development experience has been largely split between building user-friendly, customer-facing UIs in Angular with Node.js, and highly-performant, highly-available, and widely-consumed microservices in Java; many of which help serve as the backbone for the foundational customer identity API platform leveraged by dozens of teams at General Motors. Recently, I have been leveraging React, Next.js, and the Mantine UI component library to help revamp our internal consumer onboarding application.
           </p>
-          <p className="text-sm text-center py-2">
+          <p className="text-sm text-left py-2">
             I have enjoyed exploring creating some smaller side projects that you can find on my GitHub, and will continue to do so as long as I still have fingers and a brain, so check back again soon to see more!
           </p>
-          <p className="text-sm text-center py-2">
+          <p className="text-sm text-left py-2">
             I am currently based in West Michigan. My hobbies include sand volleyball, tennis, playing any video game published by From Software, and chiefly, reading sci-fi. Isaac Asimov is one of my favorite authors of all time, and his short story &quot;The Message&quot; is the inspiration for this site&apos;s mascot (and favicon): Kilroy. If you are interested, feel free to connect with me on <a 
               href="https://goodreads.com/user/show/182063111-hunter-darling" 
               target="_blank"
               rel="noreferrer" 
-              className="underline hover:underline-offset-2">
+              className="underline hover:underline-offset-2 hover:text-green-700">
               Goodreads
             </a> and take a peek at what I am currently reading!
+          </p>
+          <p className="text-sm text-left py-2">
+            If you have some free time and nothing better to do, check out my <Link href="/blog" className="underline hover:underline-offset-2 hover:text-green-700">blog</Link> where you will be subject to my thoughts on anything from video games to sports, from politics and the socioeconomic state of the world, to my cat.
           </p>
         </div>
       </section>
