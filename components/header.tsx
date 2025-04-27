@@ -20,11 +20,11 @@ export default function Header() {
               mx-1 md:mx-2 sm:mx-0 px-2 md:px-3 sm:px-1 py-1 md:py-2 
               rounded-md hover:bg-primary hover:text-primary-foreground transition-colors">Projects</Link>
             </li>
-            <li>
+            {/* <li>
               <Link href='/blog' className="inline-flex text-secondary-foreground 
               mx-1 md:mx-2 sm:mx-0 px-2 md:px-3 sm:px-1 py-1 md:py-2 
               rounded-md hover:bg-primary hover:text-primary-foreground transition-colors">Blog</Link>
-            </li>
+            </li> */}
             <li>
               <a href="mailto:hunterperryd@gmail.com?subject=Howdy Partner!"
               target="_blank"
