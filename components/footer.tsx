@@ -13,14 +13,14 @@ export default function Footer() {
               rel="noreferrer noopener"
             >
               <Image
-                className="hidden dark:block"
+                className="hidden dark:block hover:opacity-50"
                 src='/images/github-dark.svg'
                 alt="GitHub"
                 height="36"
                 width="36"
               />
               <Image
-                className="dark:hidden"
+                className="dark:hidden hover:opacity-50"
                 src='/images/github-light.svg'
                 alt="GitHub"
                 height="36"
@@ -35,14 +35,14 @@ export default function Footer() {
               rel="noreferrer noopener"
             >
               <Image
-                className="hidden dark:block"
+                className="hidden dark:block hover:opacity-50"
                 src='/images/linkedin-dark.svg'
                 alt="LinkedIn"
                 height="34"
                 width="34"
               />
               <Image
-                className="dark:hidden"
+                className="dark:hidden hover:opacity-50"
                 src='/images/linkedin-light.svg'
                 alt="LinkedIn"
                 height="34"

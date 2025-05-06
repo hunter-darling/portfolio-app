@@ -7,7 +7,7 @@ export default function Kilroy() {
         href="https://en.wikipedia.org/wiki/The_Message_(short_story)" target="_blank"
         rel="noreferrer noopener">
         <Image
-          className="mx-auto py-4 h-fit"
+          className="mx-auto py-4 h-fit hover:opacity-50"
           src='/images/kilroy.png'
           alt="Kilroy Was Here"
           height="34"
