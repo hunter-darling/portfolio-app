@@ -22,13 +22,14 @@ export default function ThemeToggle() {
     <Button 
       size="sm"
       variant="outline"
+      className={resolvedTheme === 'light' ? "hover:bg-orange-400/20 hover:border-orange-400" : "hover:bg-purple-400/20 hover:border-purple-400"}
       onClick={() => {
         setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')
       }}>
         {resolvedTheme === 'light' ? (
           <SunIcon className='size-4 text-orange-500' />          
         ) : (
-          <MoonIcon className='size-4 text-sky-300' />
+          <MoonIcon className='size-4 text-purple-400' />
         )}
         <span className='sr-only'>{resolvedTheme === 'dark' ? 'Light Mode' : 'Dark Mode'}</span>
     </Button>

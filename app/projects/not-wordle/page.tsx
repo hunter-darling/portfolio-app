@@ -24,7 +24,7 @@ export default function NotWordleAbout() {
             href="https://github.com/hunter-darling/basically-just-wordle" 
             target="_blank" 
             rel="noreferrer"
-            className="underline hover:underline-offset-2 hover:text-green-700"
+            className="underline hover:underline-offset-2 hover:text-green-700 hover:font-bold"
           >GitHub
           </a>.
         </p>

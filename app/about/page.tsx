@@ -28,7 +28,7 @@ export default function About() {
               href="https://goodreads.com/user/show/182063111-hunter-darling" 
               target="_blank"
               rel="noreferrer" 
-              className="underline hover:underline-offset-2 hover:text-green-700">
+              className="underline hover:underline-offset-2 hover:text-green-700 hover:font-bold">
               Goodreads
             </a> and take a peek at what I am currently reading!
           </p>
