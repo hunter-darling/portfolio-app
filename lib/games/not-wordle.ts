@@ -16,7 +16,7 @@ export interface GuessResult {
   outOfPlaceLetters: string[];
 }
 
-// Store game state in memory (in a real app, you'd use a database)
+// Store game state in memory
 const games: Record<string, GameState> = {};
 
 /**
