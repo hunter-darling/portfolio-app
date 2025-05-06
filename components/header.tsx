@@ -7,7 +7,7 @@ export default function Header() {
     <header className='fixed inset-x-0 top-0 z-50 bg-background/5 py-4 backdrop-blur-sm'>
       <nav className='container flex max-w-3xl items-center justify-between'>
         <div>
-          <Link href='/' className='font-serif text-3xl md:text-2xl sm:text-xl hover:text-green-700 hover:font-bold'>HD</Link>
+          <Link href='/' className='font-verdana text-3xl md:text-2xl sm:text-xl hover:text-green-700 hover:font-bold'>HD</Link>
         </div>
           <ul className='flex items-center gap-2 md:gap-3 sm:gap-1 text-sm md:text-xs sm:text-xs font-light text-muted-foreground'>
             <li>

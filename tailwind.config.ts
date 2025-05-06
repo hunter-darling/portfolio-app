@@ -19,7 +19,8 @@ const config: Config = {
   	extend: {
       fontFamily: {
         sans: ['var(--font-sans)', ...fontFamily.sans],
-        serif: ['var(--font-serif)', ...fontFamily.serif]
+        serif: ['var(--font-serif)', ...fontFamily.serif],
+        verdana: ['Verdana', 'Geneva', 'Tahoma', 'sans-serif']
       },
   		colors: {
   			background: 'hsl(var(--background))',
