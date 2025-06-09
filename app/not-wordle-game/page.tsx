@@ -4,7 +4,7 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import Link from 'next/link';
 
-// Define types for our game state
+// Define GuessResult type for the game state
 type GuessResult = {
   guess: string;
   correctLetters: string[];
@@ -22,7 +22,7 @@ export default function GamePage() {
   const [correctLetters, setCorrectLetters] = useState<string[]>([]);
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [outOfPlaceLetters, setOutOfPlaceLetters] = useState<string[]>([]);
-  const [turnsLeft, setTurnsLeft] = useState(5);
+  const [turnsLeft, setTurnsLeft] = useState(6);
   const [guessHistory, setGuessHistory] = useState<GuessResult[]>([]);
   const [actualWord, setActualWord] = useState<string>('');
   const terminalRef = useRef<HTMLDivElement>(null);
@@ -97,7 +97,7 @@ export default function GamePage() {
     }
   }, [messages, guessHistory]);
 
-  // Focus input field when game is not over
+  // Set focus to input field when game is not over
   useEffect(() => {
     if (!gameOver && inputRef.current) {
       inputRef.current.focus();
