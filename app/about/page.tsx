@@ -16,7 +16,7 @@ export default function About() {
           />
           <h1 className="text-xl font-bold w-fit mx-auto py-2">Howdy!</h1>
           <p className="text-sm text-left py-2">
-            For the last 4 years I have been working as a software engineer with a focus in web application development, specifically in the customer identity and profile management space.</p>
+            For the last 5 years I have been working as a software engineer with a focus in web application development, specifically in the customer identity and profile management space.</p>
           <p className="text-sm text-left py-2">
             My professional software development experience has been largely split between building user-friendly, customer-facing UIs in Angular with Node.js, and highly-performant, highly-available, and widely-consumed microservices in Java; many of which help serve as the backbone for the foundational customer identity API platform leveraged by dozens of teams at General Motors. Recently, I have been leveraging React, Next.js, and the Mantine UI component library to help revamp our internal consumer onboarding application.
           </p>
