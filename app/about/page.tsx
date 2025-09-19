@@ -16,15 +16,15 @@ export default function About() {
           />
           <h1 className="text-xl font-bold w-fit mx-auto py-2">Howdy!</h1>
           <p className="text-sm text-left py-2">
-            For the last 5 years I have been working as a software engineer with a focus in web application development, specifically in the customer identity and profile management space.</p>
+            For the last 5+ years I have been working as a software engineer with a focus in web application development, specifically in the customer identity and profile management space.</p>
           <p className="text-sm text-left py-2">
-            My professional software development experience has been largely split between building user-friendly, customer-facing UIs in Angular with Node.js, and highly-performant, highly-available, and widely-consumed microservices in Java; many of which help serve as the backbone for the foundational customer identity API platform leveraged by dozens of teams at General Motors. Recently, I have been leveraging React, Next.js, and the Mantine UI component library to help revamp our internal consumer onboarding application.
+            My professional software development experience has been largely split between building user-friendly, customer-facing UIs in Angular with Node.js, and highly-performant, highly-available, and widely-consumed microservices in Java with Spring Boot; many of which help serve as the backbone for the customer identity API platform leveraged by dozens of teams at General Motors. Recently, I have been leveraging React, Next.js, and the Mantine UI component library to help revamp the internal consumer onboarding application for Customer Digital Identity team within the Foundational Services organization at General Motors.
           </p>
           <p className="text-sm text-left py-2">
             I have enjoyed exploring creating some smaller side projects that you can find on my GitHub, and will continue to do so as long as I still have fingers and a brain, so check back again soon to see more!
           </p>
           <p className="text-sm text-left py-2">
-            I am currently based in West Michigan. My hobbies include sand volleyball, tennis, playing any video game published by From Software, and chiefly, reading sci-fi. Isaac Asimov is one of my favorite authors of all time, and his short story &quot;The Message&quot; is the inspiration for this site&apos;s mascot (and favicon): Kilroy. If you are interested, feel free to connect with me on <a 
+            I am currently based in West Michigan. My hobbies include volleyball, tennis, playing any video game published by From Software, and chiefly, reading sci-fi. Isaac Asimov is one of my favorite authors of all time, and his short story &quot;The Message&quot; is the inspiration for this site&apos;s mascot (and favicon): Kilroy. If you are interested, feel free to connect with me on <a 
               href="https://goodreads.com/user/show/182063111-hunter-darling" 
               target="_blank"
               rel="noreferrer" 
