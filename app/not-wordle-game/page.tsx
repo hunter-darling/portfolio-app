@@ -63,7 +63,6 @@ export default function GamePage() {
       if (data.status === 'success') {
         setMessages([data.message]);
         console.log(`Game started with ID: ${newGameId}`);
-        console.log('Current game ID in state:', gameId);
       } else {
         setMessages([`Error: ${data.message}`]);
         console.error(`Failed to start game: ${data.message}`);

@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from "react"
+import { useSyncExternalStore } from "react"
 import { useTheme } from "next-themes"
 
 import { Button } from "@/components/ui/button"
@@ -8,11 +8,12 @@ import { MoonIcon, SunIcon } from "@radix-ui/react-icons"
 
 export default function ThemeToggle() {
   const { setTheme, resolvedTheme } = useTheme()
-  const [mounted, setMounted] = useState(false)
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
+  // false on the server and during hydration, true once mounted on the client
+  const mounted = useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false
+  )
 
   if (!mounted) {
     return null
