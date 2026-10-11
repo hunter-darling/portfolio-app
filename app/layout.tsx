@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
-  variable: "--font-serif"
+  variable: "--font-playfair"
 })
 
 export const metadata: Metadata = {

@@ -4,7 +4,7 @@ import ThemeToggle from './theme-toggle'
 
 export default function Header() {
   return (
-    <header className='fixed inset-x-0 top-0 z-50 bg-background/5 py-4 backdrop-blur-sm'>
+    <header className='fixed inset-x-0 top-0 z-50 bg-background/5 py-4 backdrop-blur-xs'>
       <nav className='container flex max-w-3xl items-center justify-between'>
         <div>
           <Link href='/' className='font-verdana text-3xl md:text-2xl sm:text-xl hover:text-green-700 hover:font-bold'>HD</Link>

@@ -265,7 +265,7 @@ export default function GamePage() {
       <div className="mb-6">
         <Link 
           href="/projects" 
-          className="inline-flex text-secondary-foreground px-4 py-2 rounded-md hover:bg-primary/20 transition-colors outline outline-secondary-foreground/20"
+          className="inline-flex text-secondary-foreground px-4 py-2 rounded-md hover:bg-primary/20 transition-colors outline-solid outline-secondary-foreground/20"
         >
           Back to Projects
         </Link>
@@ -319,7 +319,7 @@ export default function GamePage() {
                 value={input}
                 onChange={handleInputChange}
                 maxLength={5}
-                className="bg-transparent border-none outline-none text-white w-full"
+                className="bg-transparent border-none outline-hidden text-white w-full"
                 placeholder="Enter your guess..."
                 disabled={isLoading || gameOver}
                 autoFocus

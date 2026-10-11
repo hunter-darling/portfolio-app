@@ -6,7 +6,7 @@ export default function NotWordleAbout() {
       <div className="mb-8">
         <Link 
           href="/projects" 
-          className="inline-flex text-secondary-foreground px-4 py-2 rounded-md hover:bg-primary/20 transition-colors outline outline-secondary-foreground/20"
+          className="inline-flex text-secondary-foreground px-4 py-2 rounded-md hover:bg-primary/20 transition-colors outline-solid outline-secondary-foreground/20"
         >
           Back to Projects
         </Link>

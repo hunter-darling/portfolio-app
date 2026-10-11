@@ -15,13 +15,13 @@ export default function Projects() {
               </p>
               <Link 
                 href="/projects/not-wordle"
-                className="inline-flex text-secondary-foreground px-4 py-2 rounded-md hover:bg-primary/20 transition-colors outline outline-secondary-foreground/20"
+                className="inline-flex text-secondary-foreground px-4 py-2 rounded-md hover:bg-primary/20 transition-colors outline-solid outline-secondary-foreground/20"
               >
                 About
               </Link>
               <Link 
                 href="/not-wordle-game" 
-                className="inline-block text-secondary-foreground ml-4 px-4 py-2 rounded-md hover:bg-primary hover:text-primary-foreground transition-colors outline outline-secondary-foreground"
+                className="inline-block text-secondary-foreground ml-4 px-4 py-2 rounded-md hover:bg-primary hover:text-primary-foreground transition-colors outline-solid outline-secondary-foreground"
               >
                 Play
               </Link>
@@ -33,7 +33,7 @@ export default function Projects() {
               </p>
               <Link 
                 href="/projects/common-login" 
-                className="inline-flex text-secondary-foreground px-4 py-2 rounded-md hover:bg-primary/20 transition-colors outline outline-secondary-foreground/20"
+                className="inline-flex text-secondary-foreground px-4 py-2 rounded-md hover:bg-primary/20 transition-colors outline-solid outline-secondary-foreground/20"
               >
                 About
               </Link>
