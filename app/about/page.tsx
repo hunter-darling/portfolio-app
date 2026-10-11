@@ -16,9 +16,13 @@ export default function About() {
           />
           <h1 className="text-xl font-bold w-fit mx-auto py-2">Howdy!</h1>
           <p className="text-sm text-left py-2">
-            For the last 5+ years I have been working as a software engineer with a focus in web application development, specifically in the customer identity and profile management space.</p>
+            For the last 5+ years I have been working as a software engineer, most recently with Cavallo in Grand Rapids, Michigan. My focus has been web application development, specifically in customer identity, profile management, and now data-driven analytics products.
+          </p>
           <p className="text-sm text-left py-2">
-            My professional software development experience has been largely split between building user-friendly, customer-facing UIs in Angular with Node.js, and highly-performant, highly-available, and widely-consumed microservices in Java with Spring Boot; many of which help serve as the backbone for the customer identity API platform leveraged by dozens of teams at General Motors. Recently, I have been leveraging React, Next.js, and the Mantine UI component library to help revamp the internal consumer onboarding application for Customer Digital Identity team within the Foundational Services organization at General Motors.
+            At General Motors, my work was split between customer-facing UIs in Angular and Node.js and highly-available Spring Boot microservices. I designed Spring-based microservices integrating with Azure Active Directory (Entra ID) and Kafka to support identity services for more than 40 million active users, and I led the migration of GM&apos;s shared sign-in experience from a legacy JavaScript application to Angular, with reusable UI components across multiple GM brands.
+          </p>
+          <p className="text-sm text-left py-2">
+            At Cavallo, I am embedded within the Cloud Development team helping build the Profit Maximization Platform, which turns noisy distributor ERP data into actionable insights. Collaborating frequently with the data science team, I help translate scientific findings into deliverable features; the most significant of which was the redesign of our churn prediction model that runs as part of the core ETL pipeline. I have also owned and built various user-facing features in the PMP React app, helping to bring our data-driven insights to the forefront of the business.~
           </p>
           <p className="text-sm text-left py-2">
             I have enjoyed exploring creating some smaller side projects that you can find on my GitHub, and will continue to do so as long as I still have fingers and a brain, so check back again soon to see more!
